@@ -1,0 +1,184 @@
+Microsoft Windows [Version 10.0.26200.8457]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\dcsuser>cd ./csc209s3
+The system cannot find the path specified.
+
+C:\Users\dcsuser>cd ./CSC209S3
+The system cannot find the path specified.
+
+C:\Users\dcsuser>mkdir csc209s3
+
+C:\Users\dcsuser>cd ./csc209s3
+
+C:\Users\dcsuser\csc209s3>python --version
+Python 3.14.5
+
+C:\Users\dcsuser\csc209s3>python -m venv my_env
+
+C:\Users\dcsuser\csc209s3>my_env\Scripts\activate
+
+(my_env) C:\Users\dcsuser\csc209s3>import math
+'import' is not recognized as an internal or external command,
+operable program or batch file.
+
+(my_env) C:\Users\dcsuser\csc209s3>10/3
+'10' is not recognized as an internal or external command,
+operable program or batch file.
+
+(my_env) C:\Users\dcsuser\csc209s3>python
+Python 3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import math
+>>> pip install numpy
+  File "<python-input-1>", line 1
+    pip install numpy
+        ^^^^^^^
+SyntaxError: invalid syntax
+>>> python
+Traceback (most recent call last):
+  File "<python-input-2>", line 1, in <module>
+    python
+NameError: name 'python' is not defined
+>>> exit()
+
+(my_env) C:\Users\dcsuser\csc209s3>python
+Python 3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> pip install numpy
+  File "<python-input-0>", line 1
+    pip install numpy
+        ^^^^^^^
+SyntaxError: invalid syntax
+>>> exit()
+
+(my_env) C:\Users\dcsuser\csc209s3>pip install numpy
+Collecting numpy
+  Downloading numpy-2.4.6-cp314-cp314-win_amd64.whl.metadata (6.6 kB)
+Downloading numpy-2.4.6-cp314-cp314-win_amd64.whl (12.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.5/12.5 MB 8.3 MB/s  0:00:01
+Installing collected packages: numpy
+Successfully installed numpy-2.4.6
+
+[notice] A new release of pip is available: 26.1.1 -> 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(my_env) C:\Users\dcsuser\csc209s3>python
+Python 3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy as np
+>>> arr = [1,2,3,4]
+>>> arr1 = np.array([1,2,3])
+>>> arr1.sum()
+np.int64(6)
+>>> type(arr1)
+<class 'numpy.ndarray'>
+>>> type([1,2,3])
+<class 'list'>
+>>> arr1.mean()
+np.float64(2.0)
+>>> arr1 = np.array([1,2,3])
+>>> arr2 = np.array([4,5,6])
+>>> arr1+arr2
+array([5, 7, 9])
+>>> arr1*arr2
+array([ 4, 10, 18])
+>>> arr1/arr2
+array([0.25, 0.4 , 0.5 ])
+>>> arr1**arr2
+array([  1,  32, 729])
+>>>  arr = np.array([4,9,16,100])
+  File "<python-input-13>", line 1
+    arr = np.array([4,9,16,100])
+IndentationError: unexpected indent
+>>> arr = np.array([4,9,16,100])
+>>> np.sqrt(arr)
+array([ 2.,  3.,  4., 10.])
+>>> np.pi
+3.141592653589793
+>>> angles = np.array([0,np.pi/2,np.pi])
+>>> np.sin(angles)
+array([0.0000000e+00, 1.0000000e+00, 1.2246468e-16])
+>>> np.mean([1,2,3,4,5])
+np.float64(3.0)
+>>> arr1 = np.array([1,2,3])
+>>> arr2 = np.array([4,5,6])
+>>> arr1*arr2
+array([ 4, 10, 18])
+>>> np.multiply(arr1,arr2)
+array([ 4, 10, 18])
+>>> name = 'john'
+>>> name = 'peter'
+>>> print(name)
+peter
+>>> s = "python"
+>>> s[0]
+'p'
+>>> s[-1]
+'n'
+>>> s[-5]
+'y'
+>>> s[9]
+Traceback (most recent call last):
+  File "<python-input-31>", line 1, in <module>
+    s[9]
+    ~^^^
+IndexError: string index out of range
+>>> s[1:3]
+'yt'
+>>> s[1:4]
+'yth'
+>>> s[1,3]
+Traceback (most recent call last):
+  File "<python-input-34>", line 1, in <module>
+    s[1,3]
+    ~^^^^^
+TypeError: string indices must be integers, not 'tuple'
+>>> range(5)
+range(0, 5)
+>>> range(0,20)
+range(0, 20)
+>>> print(range)
+<class 'range'>
+>>> print(range())
+Traceback (most recent call last):
+  File "<python-input-38>", line 1, in <module>
+    print(range())
+          ~~~~~^^
+TypeError: range expected at least 1 argument, got 0
+>>> print(range(5))
+range(0, 5)
+>>> list(range(5))
+[0, 1, 2, 3, 4]
+>>> list(range(0,5))
+[0, 1, 2, 3, 4]
+>>> l2 = list(range(5))
+>>> l2[5]
+Traceback (most recent call last):
+  File "<python-input-43>", line 1, in <module>
+    l2[5]
+    ~~^^^
+IndexError: list index out of range
+>>> l2[4]
+4
+>>> abs(-1)
+1
+>>> len(l2)
+5
+>>> l2[len(l2)-1]
+4
+>>> len("python")
+6
+>>> range(3,15,2)
+range(3, 15, 2)
+>>> list(range(3,15,2))
+[3, 5, 7, 9, 11, 13]
+>>> list(range(3,16,2))
+[3, 5, 7, 9, 11, 13, 15]
+>>> list(range(3,17,2))
+[3, 5, 7, 9, 11, 13, 15]
+>>> list(range(4,20,2))
+[4, 6, 8, 10, 12, 14, 16, 18]
+>>> list(range(4,21,2))
+[4, 6, 8, 10, 12, 14, 16, 18, 20]
+>>>
