@@ -1,0 +1,243 @@
+Microsoft Windows [Version 10.0.26200.8737]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DCSUSER>cd ./csc209s3
+
+C:\Users\DCSUSER\csc209s3>python -m venv my_env
+
+C:\Users\DCSUSER\csc209s3>my_env\Scripts\activate
+
+(my_env) C:\Users\DCSUSER\csc209s3>pip install numpy
+Collecting numpy
+  Downloading numpy-2.5.0-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Downloading numpy-2.5.0-cp312-cp312-win_amd64.whl (12.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 22.9 MB/s eta 0:00:00
+Installing collected packages: numpy
+Successfully installed numpy-2.5.0
+
+[notice] A new release of pip is available: 24.2 -> 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(my_env) C:\Users\DCSUSER\csc209s3>import math
+'import' is not recognized as an internal or external command,
+operable program or batch file.
+
+(my_env) C:\Users\DCSUSER\csc209s3>python
+Python 3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import math
+>>> import numpy as np
+>>> nums = [10,20,30]
+>>> nums.append(40)
+>>> print(nums)
+[10, 20, 30, 40]
+>>> fruits = ["apple","banana","orange"]
+>>> fruits.remove(2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> fruits.remove("banana")
+>>> print(fruits)
+['apple', 'orange']
+>>> color = ["red","green","blue"]
+>>> color.insert(1,'yellow')
+>>> color
+['red', 'yellow', 'green', 'blue']
+>>> marks = [50,60,70,80]
+>>> marks.pop()
+80
+>>> marks
+[50, 60, 70]
+>>> letters = {"a","b","c"}
+>>> letters.add("d")
+>>> letters
+{'a', 'd', 'c', 'b'}
+>>> numbers = {1,2,3,4}
+>>> numbers.discard(3)
+>>> numbers
+{1, 2, 4}
+>>> numbers.discard(3)
+>>> numbers
+{1, 2, 4}
+>>> student = {"name":"Alice","age":"20"}
+>>> student["city"]="Kandy"
+>>> student
+{'name': 'Alice', 'age': '20', 'city': 'Kandy'}
+>>> employee = {"id":"101","name":"John","salary":"50000"}
+>>> employee["salary"]
+'50000'
+>>> t = (a0,20,30,20)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a0' is not defined
+>>> t = (10,20,30,20)
+>>> print(t.count(20))
+2
+>>> employee.get("Salary")
+>>> t = (5,10,15,20)
+>>> print(t.index(15))
+2
+>>> print(t.index(50))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: tuple.index(x): x not in tuple
+>>> input()
+5
+'5'
+>>> arr = [2,4]
+>>> lastIndex = arr.pop()
+>>> name = input()
+john
+>>> name
+'john'
+>>> name = input("Enter name: ")
+Enter name: Isfak
+>>> name
+'Isfak'
+>>> name = input("Enter name: ")
+Enter name: Isfak
+>>> name
+'Isfak'
+>>> age = input(Enter Age: ")
+  File "<stdin>", line 1
+    age = input(Enter Age: ")
+                ^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> age = input("Enter Age: ")
+Enter Age: 23
+>>> age
+'23'
+>>> age+10
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> type(name)
+<class 'str'>
+>>> type(age)
+<class 'str'>
+>>> type(int(age))
+<class 'int'>
+>>> str(123)
+'123'
+>>> float(12)
+12.0
+>>> age = int(input("Age: "))
+Age: 25
+>>>
+>>> type(age)
+<class 'int'>
+>>> h = input("'enter height: ")
+'enter height: 5.6
+>>> h = float(input("enter height: "))
+enter height: 25
+>>> type(height)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'height' is not defined
+>>> type(h)
+<class 'float'>
+>>> ls = "10,20,30"
+>>> ls.split(",")
+['10', '20', '30']
+>>> ls = "10|20|30"
+>>> ls.split("|")
+['10', '20', '30']
+>>> type(ls)
+<class 'str'>
+>>> txt = int(input("Enter the elements: "))
+Enter the elements: 10,20,30
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '10,20,30'
+>>> txt = intput("Enter the elements: ")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'intput' is not defined. Did you mean: 'input'?
+>>> txt = input("Enter the elements: ")
+Enter the elements: 10,20,30
+>>> txt
+'10,20,30'
+>>> list = txt
+>>> list
+'10,20,30'
+>>> txt[0] = int[txt[0])
+  File "<stdin>", line 1
+    txt[0] = int[txt[0])
+                       ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+>>> list[0] = int[list[0])
+  File "<stdin>", line 1
+    list[0] = int[list[0])
+                         ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+>>> txt[0] = int(txt[0])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> type(list)
+<class 'str'>
+>>> list[0] = int(list[0])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> txt = input("Enter the elements: ")
+Enter the elements: 10,20,30
+>>> txt
+'10,20,30'
+>>> txt.split(,)
+  File "<stdin>", line 1
+    txt.split(,)
+              ^
+SyntaxError: invalid syntax
+>>> txt.split(",")
+['10', '20', '30']
+>>> txt[0] = int(txt[0])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> txt = txt.split(",")
+>>> txt
+['10', '20', '30']
+>>> txt[0] = int(txt[0])
+>>> type(txt)
+<class 'list'>
+>>> txt
+[10, '20', '30']
+>>> txt[0]
+10
+>>> type(txt[0])
+<class 'int'>
+>>> arr = list(map(int,input().split(",")))
+10,20,30
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object is not callable
+>>> arr
+[2]
+>>>
+>>>
+>>> arr = list(map(int,input().split(",")))
+10,20,30
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object is not callable
+>>> input.split(",")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'builtin_function_or_method' object has no attribute 'split'
+>>> input().split(",")
+10,20,30
+['10', '20', '30']
+>>> list(map(int,['10', '20', '30']))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object is not callable
+>>>>>> exit()
+
+(my_env) C:\Users\DCSUSER\csc209s3>python
+Python 3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> list(map(int, ['10', '20', '30']))
+[10, 20, 30]
+>>> type(list)
+<class 'type'>
