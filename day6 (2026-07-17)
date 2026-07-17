@@ -1,1 +1,135 @@
+Microsoft Windows [Version 10.0.26200.8655]
+(c) Microsoft Corporation. All rights reserved.
 
+C:\Users\dcsuser\Documents\2023csc044\csc209s3>python -m venv my_env
+
+C:\Users\dcsuser\Documents\2023csc044\csc209s3>
+
+C:\Users\dcsuser\Documents\2023csc044\csc209s3>my_env\Scripts\activate
+
+(my_env) C:\Users\dcsuser\Documents\2023csc044\csc209s3>pip install numpy
+Collecting numpy
+  Downloading numpy-2.5.1-cp314-cp314-win_amd64.whl.metadata (6.6 kB)
+Downloading numpy-2.5.1-cp314-cp314-win_amd64.whl (12.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 7.1 MB/s  0:00:02
+Installing collected packages: numpy
+Successfully installed numpy-2.5.1
+
+[notice] A new release of pip is available: 26.1.1 -> 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(my_env) C:\Users\dcsuser\Documents\2023csc044\csc209s3>python
+Python 3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> list(range(0,11,2))
+[0, 2, 4, 6, 8, 10]
+>>> for i in range(10):
+...
+KeyboardInterrupt
+>>> sum=0
+>>> for i in range(10):
+...     sum = sum + i
+... print(sum)
+...
+45
+>>> num = int(input("Enter a number: "))
+Enter a number: 5
+>>> for i in range(1, 11):
+...     print(f"{num} x {i} = {num * i}")
+...
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+>>> num = int(input("Enter a number: ")
+... fact=1
+... for i in range(1,num+1)
+...     print(fact*i)
+...
+  File "<python-input-5>", line 1
+    num = int(input("Enter a number: ")
+             ^
+SyntaxError: '(' was never closed
+>>> num = int(input("Enter a number: "))
+... fact=1
+... for i in range(1,num+1)
+...     print(fact*i)
+...
+  File "<python-input-6>", line 3
+    for i in range(1,num+1)
+                           ^
+SyntaxError: expected ':'
+>>> num = int(input("Enter a number: "))
+... fact=1
+... for i in range(1,num+1):
+...     print(fact*i)
+...
+Enter a number: 5
+1
+2
+3
+4
+5
+>>> num = int(input("Enter a number: "))
+... fact=1
+... for i in range(1,num+1):
+... print(fact*i)
+...
+  File "<python-input-8>", line 4
+    print(fact*i)
+    ^^^^^
+IndentationError: expected an indented block after 'for' statement on line 3
+>>> num = int(input("Enter a number: "))
+... fact=1
+... for i in range(1,num+1):
+...     fact = fact*i
+... print(fact)
+...
+Enter a number: 5
+120
+>>> num=[5,2,8,10]
+>>>  min=0
+  File "<python-input-11>", line 1
+    min=0
+IndentationError: unexpected indent
+>>> num=[5,2,8,10]
+>>> minimum=0
+>>> min_index=0
+>>>
+>>> for i in range(num):
+...
+KeyboardInterrupt
+>>> for i in range(len(num)):
+...     if(num[i]<minimum):
+...         minimum = num[i]
+...         min_index = i
+... print(f"minimum: {minimum}, index: {min_index})
+...
+  File "<python-input-16>", line 5
+    print(f"minimum: {minimum}, index: {min_index})
+          ^
+SyntaxError: unterminated f-string literal (detected at line 5)
+>>> for i in range(len(num)):
+...     if(num[i]<minimum):
+...         minimum = num[i]
+...         min_index = i
+... print(f"minimum: {minimum}, index: {min_index}")
+...
+minimum: 0, index: 0
+>>> num=[9,8,7,3]
+>>> minimum=num[0]
+>>> min_index=0
+>>> for i in range(len(num)):
+...     if(num[i]<minimum):
+...         minimum = num[i]
+...         min_index = i
+... print(f"minimum: {minimum}, index: {min_index}")
+...
+minimum: 3, index: 3
+>>>
